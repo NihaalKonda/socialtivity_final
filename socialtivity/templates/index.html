@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Socialtivity</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<style>
+	*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+
+header{
+	background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(33, 235, 214)), url(1.jpg);
+	/*background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../1.jpg);
+	/*background-image: linear-gradient(-90deg, red, yellow), url(1.jpg);*/
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+ul{
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+}
+
+ul li{
+	display: inline-block;
+	position: relative;
+	bottom: -8px
+}
+
+ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 25px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+
+}
+
+ul li a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #000;
+}
+.logo img{
+	float: left;
+	width: 100px;
+	height: auto;
+	padding: 10px 20px;
+
+}
+
+.main{
+	max-width: 1200px;
+	margin: auto;
+
+}
+
+.title{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.title h1{
+	color: #fff;
+	font-size: 70px;
+}
+
+.button{
+	position: absolute;
+	top: 62%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.btn {
+	border: 1px solid #fff;
+	padding: 10px 30px;
+	color: #fff;
+	text-decoration: none;
+	transition: 0.6s ease;
+
+}
+
+.btn:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Century Gothic;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+</style>
+<body>
+	<header>
+		<div class = "main">
+			<div class = "logo">
+				<img src="logo4.png">
+			</div>
+			<ul>
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="/forum">Forum</a></li>
+				<li><a href="/mission">Our Mission</a></li>
+				<li><a href="/contact">Contact</a></li>
+	  		</div>
+			</ul>
+		</div>
+		<div class="title">
+			<h1>Socialtivity</h1>
+		</div>
+		<div class="button">
+			<a href="mission.html" class="btn">OUR MISSION</a>
+		</div>
+	</header>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Forums</title>
+	<link rel="stylesheet" type="text/css" href="css/mission.css">
+</head>
+<style>
+	*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+
+header{
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../missionpic.jpg);
+	/*background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../1.jpg);
+	/*background-image: linear-gradient(-90deg, red, yellow), url(../1.jpg);*/
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+ul{
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+}
+
+ul li{
+	display: inline-block;
+	position: relative;
+	bottom: -8px
+}
+
+ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 5px 25px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+
+}
+
+ul li a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+ul li.active a{
+	background-color: #fff;
+	color: #000;
+}
+.logo img{
+	float: left;
+	width: 100px;
+	height: auto;
+	padding: 10px 20px;
+	filter: brightness(15);
+}
+
+.main{
+	max-width: 1800px;
+	margin: auto;
+
+}
+
+.title{
+	position: absolute;
+	top: 45%;
+	left: 16%;
+	transform: translate(-50%, -200%);
+}
+
+.title h1{
+	color: #fff;
+	font-size: 70px;
+}
+.content{
+	position: absolute;
+	top:46%;
+	left: 18%;
+	transform: translate(-50%, -20%);
+	width:100%;
+}
+
+.content{
+	color: #fff;
+	font-size: 30px;
+	margin-top:2vh;
+	display: grid;
+    justify-content:space-around;
+    left:40%;
+
+}
+.button{
+	position: absolute;
+	left: 70%;
+	transform: translate(-50%, -50%);
+}
+
+.btn {
+	border: 1px solid #fff;
+	padding: 10px 30px;
+	color: #fff;
+	text-decoration: none;
+	transition: 0.6s ease;
+	width: 10vw;
+	text-align:center;
+	margin-left:0.3vw;
+}
+
+.btn:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+.post_rect {
+border-radius:3px;
+background-color:teal;
+}
+
+</style>
+<body>
+	<header>
+		<div class = "main">
+			<div class = "logo">
+				<img src="logo4.png">
+			</div>
+			<ul>
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="/forum">Forum</a></li>
+				<li><a href="/mission">Our Mission</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</div>
+		<div class="title">
+			<h1>Poverty</h1>
+		</div>
+		<div class="content">
+            <form method="POST">
+				<input type="text" name="user" placeholder="Name:"><br><br>
+				<textarea name="content" rows="4" style="resize:none; width:70vw; height:20vh;"></textarea><br><br>
+				<input class="btn" type="submit" value="Post">
+			</form>
+			{% for entry in docs %}
+				<p style="color:white">{{entry['user']}}</p>: <p style="color:white">{{entry['content']}}</p>
+			{% endfor %}
+		</div>
+		<br>
+
+	</header>
+</body>
+</html>
